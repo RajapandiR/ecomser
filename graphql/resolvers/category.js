@@ -1,12 +1,12 @@
 import createError from 'http-errors';
 import Category from '../../models/category';
-import CategorySchema from '../../schemas/category';
-import SubCategory from '../../models/subcategory';
+// import CategorySchema from '../../schemas/category';
+// import SubCategory from '../../models/subcategory';
 // import { issueToken, getAuthUser } from '../../jwt/auth';
 import waterfall from 'async-waterfall';
 import  message from '../../config/message';
-import JsonSchemaValidator from '../../utils/jsonSchemaValidator';
-import jwt from '../../utils/jwt';
+// import JsonSchemaValidator from '../../utils/jsonSchemaValidator';
+// import jwt from '../../utils/jwt';
 
 function createCategories(categories, parentId = null){
 	const categoryList = [];
