@@ -74,15 +74,15 @@ export default {
 		addProduct: async (root, args,{ req }, info ) => {
 			waterfall([
 				function(done){
-					// let attribute = new Attribute({
-					// 	brand: args.brand,
-					// 	dimension: args.dimension,
-					// 	color: args.color,
-					// 	material: args.material,
-					// 	hardware: args.hardware
-					// })
+					let attribute = new Attribute({
+						brand: args.brand,
+						dimension: args.dimension,
+						color: args.color,
+						material: args.material,
+						hardware: args.hardware
+					})
 					Attribute.create(args,  function(err, result) {
-						done(null, result);
+						done(null,result);
 					})
 					// attribute.save()
 				  	
