@@ -74,11 +74,11 @@ export default {
         // },
 		addcategory: async (root, args,{ req }, info ) => {
 			try{
-				const validate = await JsonSchemaValidator.validate(args, CategorySchema.addCategory());
-				if (!validate.valid) {
-					console.log("sss")
-					throw createError(400, JsonSchemaValidator.errorFormatter(validate.errors));
-				}
+				// const validate = await JsonSchemaValidator.validate(args, CategorySchema.addCategory());
+				// if (!validate.valid) {
+				// 	console.log("sss")
+				// 	throw createError(400, JsonSchemaValidator.errorFormatter(validate.errors));
+				// }
 			await Category.create( args, function(err, result1) {
 				if(err)
 					console.log(Error, err)
