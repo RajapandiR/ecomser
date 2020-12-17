@@ -86,11 +86,11 @@ export default {
 					})
 					// attribute.save()
 				  	
-					
   
 				},
 				function(attribute, done){
 					let attribute_id = attribute._id
+					console.log("attribute", attribute)
 					let product = new Product({
 						name: args.name,
 						sku: args.sku,
