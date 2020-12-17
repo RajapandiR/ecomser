@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^2.19.0",
+    "async-waterfall": "^0.1.5",
     "cors": "^2.8.5",
     "esm": "^3.2.25",
     "express": "^4.17.1",
