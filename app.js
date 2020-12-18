@@ -69,19 +69,14 @@ const server = new ApolloServer({
 });
 // const MONGODB_URI = "mongodb+srv://Pandi:pandian12@cluster0.h3zrn.mongodb.net/ecomser?retryWrites=true&w=majority";
 // heroku config:set MONGODB_URI="mongodb+srv://Pandi:pandian12@cluster0.h3zrn.mongodb.net/test?retryWrites=true&w=majority"
-// mongoose.connect(DB || process.env.MONGODB_URI,
-// {
-//       useNewUrlParser: true,
-//       useUnifiedTopology: true,
-//       // useCreateIndex:true,
-//       // useFindAndModify: false
-//     });
-const uri = process.env.MONGODB_URI;
-mongoose.connect(uri || DB, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
-const connection = mongoose.connection;
-connection.once('open', () => {
-    console.log('Connection established');
-})
+mongoose.connect(DB || process.env.MONGODB_URI,
+{
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      // useCreateIndex:true,
+      // useFindAndModify: false
+    });
+
 // const DB_URL = "mongodb+srv://Pandi:pandian12@cluster0-h3zrn.mongodb.net/graphql?retryWrites=true&w=majority"
 // mongoose.connect(DB_URL,
 // 	{
