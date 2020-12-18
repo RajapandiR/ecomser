@@ -80,6 +80,7 @@ export default {
 				// 	throw createError(400, JsonSchemaValidator.errorFormatter(validate.errors));
 				// }
 			await Category.create( args, function(err, result1) {
+				console.log("args", args);
 				console.log("Step1");
 				console.log("Category", result1);
 				if(err){
