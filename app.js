@@ -72,7 +72,7 @@ const server = new ApolloServer({
 mongoose.connect(DB || process.env.MONGODB_URI,
 {
       useNewUrlParser: true,
-      useUnifiedTopology: true,
+      useUnifiedTopology: false,
       useCreateIndex:true,
       useFindAndModify: false
     });
