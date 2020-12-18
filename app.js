@@ -72,9 +72,9 @@ const server = new ApolloServer({
 mongoose.connect(DB || process.env.MONGODB_URI,
 {
       useNewUrlParser: true,
-      useUnifiedTopology: false,
-      useCreateIndex:true,
-      useFindAndModify: false
+      useUnifiedTopology: true,
+      // useCreateIndex:true,
+      // useFindAndModify: false
     });
 // const DB_URL = "mongodb+srv://Pandi:pandian12@cluster0-h3zrn.mongodb.net/graphql?retryWrites=true&w=majority"
 // mongoose.connect(DB_URL,
