@@ -80,9 +80,13 @@ export default {
 				// 	throw createError(400, JsonSchemaValidator.errorFormatter(validate.errors));
 				// }
 			await Category.create( args, function(err, result1) {
+				console.log("Step1");
 				console.log("Category", result1);
-				if(err)
-					console.log(Error, err)
+				if(err){
+					console.log("Step2");
+					console.log("Error", err)
+				}
+					
 			})
 			const response = {
 				"statusCode": 200,
@@ -90,6 +94,7 @@ export default {
 			}
 			return response			
 			}catch(err){
+				console.log("Step3");
 				console.log("Error", err);
 			}
 			
