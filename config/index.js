@@ -6,4 +6,4 @@ export const {
 	SESSION_SECRET,
 } = process.env;
 
-export const IN_PORD = NODE_ENV === "production";
+export const IN_PORD = NODE_ENV === "development";
